@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Button from "./components/Button";
+import Header from "./components/Header"
 import Gif from "./components/Gif";
 import './App.css';
 
 export default function App() {
   const [gifImg, setGifImg] = useState({});
-
+  
   const handleClick = async () => {
     const gifImg = `https://dog.ceo/api/breeds/image/random`;
 
@@ -16,7 +17,7 @@ export default function App() {
 
   return (
     <div className="App">
-     <h1>Random Dog Generator</h1>
+    <Header/>
      <Button handleClickApp={handleClick} />
      <Gif gifImg={gifImg}/>
     </div>
